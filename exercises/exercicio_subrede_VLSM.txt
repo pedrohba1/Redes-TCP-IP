@@ -1,0 +1,71 @@
+Ajuda aqui: https://www.lsi.usp.br/~ramc/cabeamento_arquivos/criacao%20de%20VLSM.pdf
+
+
+192.168.10.0/24
+
+Tenho que atender as redes: 
+A = 14 hosts;
+B = 30 hosts;
+c = 20
+d = 6
+e = 2
+f = 2
+g = 2
+h = 2
+
+
+2**5 = 32
+
+Não preciso deixar o endereço 0 e o endereço de broadcast porque o exercício não 
+falou nada sobre.
+
+24 == os primeiros 3 octetos são de rede
+
+255.255.255.0
+Dos restante 8 bits do último octeto, tenho 5 que são de hosts
+
+0 0 0 | 0 0 0 0 0
+
+2**3 = 3 suberedes;
+3 primeiros para descobrir a subrede: 2**5 + 2**6 + 2**7
+255.255.224.0
+
+
+Eu tenho as seguintes subredes desconsiderando o VLSM:
+
+
+Desconsidero:
+192.168.10.0 - 192.168.10.31
+
+
+Rede B:
+192.168.10.32 - 192.168.10.63
+
+Rede C:
+192.168.10.64 -192.168.10.95
+
+Na rede A e na D, eu vou ter desperdício de hosts de qualquer jeito:
+Mas eu posso usar mais um bit de host para criar duas sub-redes:
+
+0 0 0 0 | 0 0 0 0
+
+Daí consigo fazer a subrede A em 
+192.168.10.96 - 192.168.10.111
+
+A subrede D eu consigo fazer em 
+192.168.10.112 - 192.168.10.117 // mas ela vai usar até o 192.168.10.119 de qualquer jeito;
+
+Se e eu usar
+0 0 0 0 0 | 0 0 0 
+
+A subrede E
+192.168.10.120 - 192.168.10.121
+
+A subrede F
+192.168.10.122 - 192.168.10.123
+
+192.168.10.124 - 192.168.10.125
+
+
+
+
