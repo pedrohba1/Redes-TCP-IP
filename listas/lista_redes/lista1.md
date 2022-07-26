@@ -67,4 +67,10 @@ Como a Netflix pode fazer por exemplo.
 ### 8)
 
 No RR (Round Robin) pacotes são ordenados em classses
-com prioridade na fila. Porém, no lugar de ter um serviço estrito por prioridade entre as classes, o RR scheduler alterna serviço entre as classes. Ou seja, um pacote da classe 1 é transmitido, depois um da classe 2, depois um da classe 1, depois um da classe 2 e por aí vai (tendo duas classes de pacotes)
+com prioridade na fila. Porém, no lugar de ter um serviço estrito por prioridade entre as classes, o RR scheduler alterna serviço entre as classes. Ou seja, um pacote da classe 1 é transmitido, depois um da classe 2, depois um da classe 1, depois um da classe 2 e por aí vai (tendo duas classes de pacotes).
+
+
+No WFQ (Weighted fair queuing) pacotes que chegam são classificados igual no RR, mas cada classe pode receber uma quantidade diferente de serviço em uma quantia de tempo. Ou seja, tem pacotes da classe `i` para serem enviados,
+então a classe `i` tem garantidamente uma fração do serviço dada por `Wi/Sum(Wj)` onde a soma no denominador é dada pelos pesos das outras classes. Assim, no pior caso, mesmo se todas as classes tem pacotes na fila, a classe `i` ainda receberá  `R * Wi/Sum(Wj))` de serviço. 
+
+Se os pesos das classes forem todos iguais, então o RR e o WFQ se comportam da mesma maneira.
