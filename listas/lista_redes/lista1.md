@@ -48,4 +48,23 @@ porque ela permite comutar pacotes paralelamente, desde que eles não tenha a me
 Comutação por interconexão > comutação por barramento > comutação por memória.
 
 
-### 5)
+### 5) 
+
+Head of the line blocking é um bloquei que acontece nas portas de entrada. No HOL, pacotes chegam na porta de entrada a cada unidade de tempo mais rapidamente do que o switching fabric consegue processar para a saída.  Especificamente no HOL, ele acontece quando pacotes de diferentes portas de entrada querem ir para a mesma porta de saída. Se apenas um pacote por vez pode ser transferido de uma entrada para uma saída, k-1 pacotes precisarão esperar sua vez.
+
+### 6)
+
+FIFO.
+
+### 7)
+
+Quem determina a prioridade é o ISP. Ele pode decidir que pacotes VOIP tem maior prioridade, por exemplo. Para a ISP pode ser benéfico dar satisfação para usuários que utilizem VOIP. Verificando as portas na camada de transporte é possível saber o dado que está sendo carregado pelo datagrama e assinalar a prioridade,
+por isso a ISP consegue fazer isso.
+
+Outro jeito de classificar prioridade é uma empresa pagar uma ISP para dar prioridade para seus pacotes. 
+Como a Netflix pode fazer por exemplo.
+
+### 8)
+
+No RR (Round Robin) pacotes são ordenados em classses
+com prioridade na fila. Porém, no lugar de ter um serviço estrito por prioridade entre as classes, o RR scheduler alterna serviço entre as classes. Ou seja, um pacote da classe 1 é transmitido, depois um da classe 2, depois um da classe 1, depois um da classe 2 e por aí vai (tendo duas classes de pacotes)
