@@ -95,3 +95,17 @@ Porém, um roteador tem também um WAN address e um LAN address, ambos usados no
  
  Como são 4 roteadores e 2 hospedeiros, existem 5 interfaces entre os 2 hospedeiros: 3 interfaces que ligam os roteadores, uma interface ligando o primeiro hospedeiro ao primeiro roteador e uma interface ligando o roteador final ao hospedeiro final.
  Dos roteadores, serão indexadas 4 tabelas de encaminhamento
+
+
+ ### 15) 
+
+ Pode ser respondido com o conhecimento nesse vídeo: https://www.youtube.com/watch?v=H9DivCEFuUg&t=3s
+
+ ### 16)
+
+ Tem isso no mesmo vídeo acima
+
+
+ ### 19) tem como resolver com esse vídeo
+
+ https://www.youtube.com/watch?v=NfHR94JAO-s
