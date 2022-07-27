@@ -85,3 +85,13 @@ No IPV4 é o chamado TTL que conta quantos roteadores o pacote pode ser encaminh
 
 O roteador tem a quantidade de IPs igual a quantidade de interfaces físicas. 
 Porém, um roteador tem também um WAN address e um LAN address, ambos usados no NAT. Isso conta?
+
+
+### 11)
+
+ 11001010.00000011.00001110 .00011001
+
+ ### 13)
+ 
+ Como são 4 roteadores e 2 hospedeiros, existem 5 interfaces entre os 2 hospedeiros: 3 interfaces que ligam os roteadores, uma interface ligando o primeiro hospedeiro ao primeiro roteador e uma interface ligando o roteador final ao hospedeiro final.
+ Dos roteadores, serão indexadas 4 tabelas de encaminhamento
