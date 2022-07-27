@@ -74,3 +74,14 @@ No WFQ (Weighted fair queuing) pacotes que chegam são classificados igual no RR
 então a classe `i` tem garantidamente uma fração do serviço dada por `Wi/Sum(Wj)` onde a soma no denominador é dada pelos pesos das outras classes. Assim, no pior caso, mesmo se todas as classes tem pacotes na fila, a classe `i` ainda receberá  `R * Wi/Sum(Wj))` de serviço. 
 
 Se os pesos das classes forem todos iguais, então o RR e o WFQ se comportam da mesma maneira.
+
+
+### 9)
+
+No IPV4 é o chamado TTL que conta quantos roteadores o pacote pode ser encaminhado. No IPV6 é o Hop Limit.
+
+
+### 10)
+
+O roteador tem a quantidade de IPs igual a quantidade de interfaces físicas. 
+Porém, um roteador tem também um WAN address e um LAN address, ambos usados no NAT. Isso conta?
