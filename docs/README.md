@@ -154,3 +154,21 @@ R3(config-router)#network 192.168.3.0
 R4(config)#router rip
 R4(config-router)#network 192.168.4.0
 ```
+
+
+
+## Implementação do NAT
+
+Implementamos o NAT no R3:
+
+```
+R3
+R3(config)#int g2/0
+R3(config-if)# ip address dhcp   
+R3(config-if)#no shut
+```
+
+## Implementação do DNS
+
+
+
