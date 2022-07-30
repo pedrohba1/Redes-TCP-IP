@@ -123,3 +123,34 @@ Estes são os comandos para configurar os roteadores com seus respectivos ips.
 1. Implementar protocolos de roteamento
 2. Implementar DHCP ou NAT
 
+
+## Implementação do RIP
+
+
+```
+R1(config)#router rip
+R1(config-router)#network 192.168.1.0
+R1(config-router)#network 192.168.2.0
+```
+
+
+
+```
+R2(config)#router rip
+R2(config-router)#network 192.168.1.0
+R2(config-router)#network 192.168.2.0
+R2(config-router)#network 192.168.3.0
+```
+
+
+
+```
+R3(config)#router rip
+R3(config-router)#network 192.168.2.0
+R3(config-router)#network 192.168.3.0
+```
+
+```
+R4(config)#router rip
+R4(config-router)#network 192.168.4.0
+```
