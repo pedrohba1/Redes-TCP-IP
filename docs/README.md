@@ -88,7 +88,7 @@ Estes são os comandos para configurar os roteadores com seus respectivos ips.
 > R5
 # configure terminal
 # interface gigabitEthernet 1/0 
-# ip address 192.168.5.1 255.255.255.252
+# ip address 192.168.5.2 255.255.255.252
 # no shutdown
 # exit
 # interface fastEthernet 0/0
