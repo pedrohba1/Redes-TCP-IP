@@ -253,3 +253,32 @@ R9(config-if)#tunnel destination 192.168.8.1
 R9(config-if)#tunnel mode ipv6ip
 R9(config-if)#ipv6 address 3000::2/64
 ```
+
+## Implementação do OSPF
+```
+R4#configure terminal
+R4(config)#router ospf 1
+R4(config-router)#network 192.168.5.0 255.255.255.252 area 0
+```
+
+```
+R5#configure terminal
+R5(config)#router ospf 1
+R5(config-router)#network 192.168.5.0 255.255.255.252 area 0
+R5(config-router)#network 192.168.6.0 255.255.255.252 area 0
+R5(config-router)#network 192.168.10.0 255.255.255.252 area 0
+```
+
+```
+R6#configure terminal
+R6(config)#router ospf 1
+R6(config-router)#network 192.168.6.0 255.255.255.252 area 0
+R6(config-router)#network 192.168.7.0 255.255.255.252 area 0
+```
+
+```
+R7#configure terminal
+R7(config)#router ospf 1
+R7(config-router)#network 192.168.7.0 255.255.255.252 area 0
+R7(config-router)#network 192.168.10.0 255.255.255.252 area 0
+```
