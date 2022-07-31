@@ -15,6 +15,7 @@ Essa é a imagem de como ficará a topologia do trabalho. Cada interface terá s
 |          | g2/0      | 192.168.3.1/30 | 255.255.255.252 | Cisco    |
 | R3       | f0/0      | 192.168.2.2/30 | 255.255.255.252 | Cisco    |
 |          | g1/0      | 192.168.3.2/30 | 255.255.255.252 | Cisco    |
+|          | g2/0      | gerado por dhcp| 255.255.255.252 | Cisco    |
 | R4       | f0/0      | 192.168.4.2/30 | 255.255.255.252 | Cisco    |
 |          | g1/0      | 192.168.5.1/30 | 255.255.255.252 | Cisco    |
 | R5       | g1/0      | 192.168.5.2/30 | 255.255.255.252 | Cisco    |
@@ -162,7 +163,7 @@ R4(config-router)#network 192.168.4.0
 Implementamos o NAT no R3:
 
 ```
-R3
+R3# config
 R3(config)#int g2/0
 R3(config-if)# ip address dhcp   
 R3(config-if)#no shut
@@ -170,5 +171,8 @@ R3(config-if)#no shut
 
 ## Implementação do DNS
 
-
-
+```
+R3# config
+R3(config)# ip name-server 8.8.8.8
+R3(config)# ip domain-lookup
+```
