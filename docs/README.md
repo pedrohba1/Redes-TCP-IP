@@ -22,11 +22,11 @@ Essa é a imagem de como ficará a topologia do trabalho. Cada interface terá s
 |          | g2/0      | 192.168.8.2/30  | 255.255.255.252 | Cisco    |
 | R5       | g1/0      | 192.168.5.2/30  | 255.255.255.252 | Cisco    |
 |          | f0/0      | 192.168.6.1/30  | 255.255.255.252 | Cisco    |
-|          | g2/0      | 192.168.10.1/30 | 255.255.255.252 | Cisco    |
+|          | g2/0      | 192.168.11.1/30 | 255.255.255.252 | Cisco    |
 | R6       | f0/0      | 192.168.6.2/30  | 255.255.255.252 | Cisco    |
 |          | g1/0      | 192.168.7.1/30  | 255.255.255.252 | Cisco    |
 | R7       | g1/0      | 192.168.7.2/30  | 255.255.255.252 | Cisco    |
-|          | g2/0      | 192.168.10.2/30 | 255.255.255.252 | Cisco    |
+|          | g2/0      | 192.168.11.2/30 | 255.255.255.252 | Cisco    |
 | R8       | g1/0      | 192.168.8.1/30  | 255.255.255.252 | Cisco    |
 |          | f0/0      | 192.168.10.2/30  | 255.255.255.252 | Cisco    |
 | R9       | g1/0      | 192.168.9.1/30  | 255.255.255.252 | Cisco    |
@@ -275,7 +275,7 @@ R5#configure terminal
 R5(config)#router ospf 1
 R5(config-router)#network 192.168.5.0 255.255.255.0 area 0
 R5(config-router)#network 192.168.6.0 0.255.255.255 area 1
-R5(config-router)#network 192.168.10.0 0.255.255.255 area 1
+R5(config-router)#network 192.168.11.0 0.255.255.255 area 1
 ```
 
 ```
@@ -289,7 +289,7 @@ R6(config-router)#network 192.168.7.0 255.255.255.252 area 1
 R7#configure terminal
 R7(config)#router ospf 1
 R7(config-router)#network 192.168.7.0 0.255.255.255 area 1
-R7(config-router)#network 192.168.10.0 0.255.255.255 area 1
+R7(config-router)#network 192.168.11.0 0.255.255.255 area 1
 ```
 
 
