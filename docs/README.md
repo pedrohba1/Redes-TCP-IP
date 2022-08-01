@@ -28,7 +28,10 @@ Essa é a imagem de como ficará a topologia do trabalho. Cada interface terá s
 | R7       | g1/0      | 192.168.7.2/30  | 255.255.255.252 | Cisco    |
 |          | g2/0      | 192.168.10.2/30 | 255.255.255.252 | Cisco    |
 | R8       | g1/0      | 192.168.8.1/30  | 255.255.255.252 | Cisco    |
+|          | f0/0      | 192.168.10.2/30  | 255.255.255.252 | Cisco    |
 | R9       | g1/0      | 192.168.9.1/30  | 255.255.255.252 | Cisco    |
+| R10       | ether1      | 192.168.10.1/30  | 255.255.255.252 | Mikrotik|
+
 
 
 ## Configuração
@@ -151,6 +154,8 @@ Estes são os comandos para configurar os roteadores com seus respectivos ips.
 # configure terminal
 # interface gigabitEthernet 1/0
 # ip address 192.168.8.1 255.255.255.252
+# interface f0/0
+# ip address 192.168.10.2 255.255.255.252
 # no shutdown
 # exit
 
@@ -160,10 +165,14 @@ Estes são os comandos para configurar os roteadores com seus respectivos ips.
 # ip address 192.168.9.1 255.255.255.252
 # no shutdown
 # exit
+```
 
-
+No roteador R10 (mikroTik):
 
 ```
+[admin@MikroTik] /ip> address/ add  address=192.168.10.1/30 interface=ether1
+```
+
 
 ## Próximos passos
 1. Implementar protocolos de roteamento
@@ -281,4 +290,11 @@ R7#configure terminal
 R7(config)#router ospf 1
 R7(config-router)#network 192.168.7.0 255.255.255.252 area 0
 R7(config-router)#network 192.168.10.0 255.255.255.252 area 0
+```
+
+
+No mikrotik
+
+```
+[admin@MikroTik] > /routing/ ospf instance/ add name=default
 ```
