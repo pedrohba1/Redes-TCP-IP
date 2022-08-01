@@ -274,7 +274,7 @@ R4(config-router)#network 192.168.5.0 0.255.255.255 area 0
 R5#configure terminal
 R5(config)#router ospf 1
 R5(config-router)#network 192.168.5.0 255.255.255.0 area 0
-R5(config-router)#network 192.168.6.0 0.255.255.255 area 1
+R5(config-router)#network 192.168.6.0 0.255.255.255 area 1  
 R5(config-router)#network 192.168.11.0 0.255.255.255 area 1
 ```
 
@@ -297,4 +297,20 @@ No mikrotik
 
 ```
 [admin@MikroTik] > /routing/ ospf instance/ add name=default
+```
+
+
+## Redistribuição do RIP pro OSPF
+
+```
+R4(config)#router rip
+R4(config-router)#passive-interface g1/0
+R4(config-router)#passive-interface g2/0
+R4(config-router)#default-metric 10
+R4(config-router)#redistribute ospf 1
+R4(config-router)#distribute-list 10 out ospf 1
+
+R4(config)#router ospf 1
+R4(config-router)#redistribute rip subnets
+R4(config-router)#distribute-list 11 out rip
 ```
