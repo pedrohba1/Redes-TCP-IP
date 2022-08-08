@@ -1,0 +1,14 @@
+Para realizar o acesso ao projeto:
+
+https://drive.google.com/drive/folders/13GAwN_ercHPx3QrqX08tqiNl7h220MBj?usp=sharing
+
+O arquivo do gns3 junto com um readme está zipado aqui.
+
+Colocamos o projeto completo em trabalho-v6. Mas também a opção de abrir o trabalho-v6-exportable.gns3project
+que é o exportable em tamanho menor.
+
+Também subimos o projeto no github:
+https://github.com/pedrohba1/Redes-TCP-IP
+
+O projeto está ou na pasta /docs ou na pasta /projeto (fizemos uma refatoração do nome da pasta por isso pode estar uma das duas
+dependendo do commit)
