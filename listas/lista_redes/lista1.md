@@ -97,13 +97,13 @@ Porém, um roteador tem também um WAN address e um LAN address, ambos usados no
  Dos roteadores, serão indexadas 4 tabelas de encaminhamento
 
 
-### 14)
+        ### 14)
 
-Agregação de rotas é um método usado para minimizar o número de tabelas de roteamento. 
-Consiste em combinar múltiplas rotas com endereços diferentes em uma única entidade. A vantagem é que
-reduz custo de bandwidth e cpu e diminui o tamanho da routing table.
-Consiste encontrar os bits comuns de várias rotas, representar bits comuns com 1 e incomuns com 0, calcular o block size
-e em seguida representar a rede com o block size.
+        Agregação de rotas é um método usado para minimizar o número de tabelas de roteamento. 
+        Consiste em combinar múltiplas rotas com endereços diferentes em uma única entidade. A vantagem é que
+        reduz custo de bandwidth e cpu e diminui o tamanho da routing table.
+        Consiste encontrar os bits comuns de várias rotas, representar bits comuns com 1 e incomuns com 0, calcular o block size
+        e em seguida representar a rede com o block size.
 
 
  ### 15) 
